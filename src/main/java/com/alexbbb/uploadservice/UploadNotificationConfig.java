@@ -71,6 +71,8 @@ public class UploadNotificationConfig implements Parcelable {
         return error;
     }
 
+    public final String getGroup(){ return group; }
+
     public final boolean isAutoClearOnSuccess() {
         return autoClearOnSuccess;
     }

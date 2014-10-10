@@ -155,7 +155,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected String getMethod() {
+    public String getMethod() {
         return method;
     }
 
@@ -164,7 +164,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected String getUploadId() {
+    public String getUploadId() {
         return uploadId;
     }
 
@@ -173,7 +173,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected String getServerUrl() {
+    public String getServerUrl() {
         return url;
     }
 
@@ -182,7 +182,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected ArrayList<FileToUpload> getFilesToUpload() {
+    public ArrayList<FileToUpload> getFilesToUpload() {
         return filesToUpload;
     }
 
@@ -191,7 +191,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected ArrayList<NameValue> getHeaders() {
+    public ArrayList<NameValue> getHeaders() {
         return headers;
     }
 
@@ -200,7 +200,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected ArrayList<NameValue> getParameters() {
+    public ArrayList<NameValue> getParameters() {
         return parameters;
     }
 
@@ -209,7 +209,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected UploadNotificationConfig getNotificationConfig() {
+    public UploadNotificationConfig getNotificationConfig() {
         return notificationConfig;
     }
 
@@ -218,7 +218,7 @@ public class UploadRequest {
      * 
      * @return
      */
-    protected Context getContext() {
+    public Context getContext() {
         return context;
     }
 }
