@@ -9,13 +9,14 @@ import android.os.Parcelable;
  * @author alexbbb (Alex Gotev)
  *
  */
-class UploadNotificationConfig implements Parcelable {
+public class UploadNotificationConfig implements Parcelable {
 
     private final int iconResourceID;
     private final String title;
     private final String message;
     private final String completed;
     private final String error;
+    private final String group;
     private final boolean autoClearOnSuccess;
 
     public UploadNotificationConfig() {
@@ -25,6 +26,7 @@ class UploadNotificationConfig implements Parcelable {
         completed = "upload completed successfully!";
         error = "error during upload";
         autoClearOnSuccess = false;
+        group = null;
     }
 
     public UploadNotificationConfig(final int iconResourceID,
@@ -32,7 +34,8 @@ class UploadNotificationConfig implements Parcelable {
                                     final String message,
                                     final String completed,
                                     final String error,
-                                    final boolean autoClearOnSuccess)
+                                    final boolean autoClearOnSuccess,
+                                    final String group)
                                     throws IllegalArgumentException{
 
         if (title == null || message == null || completed == null || error == null) {
@@ -45,6 +48,7 @@ class UploadNotificationConfig implements Parcelable {
         this.completed = completed;
         this.error = error;
         this.autoClearOnSuccess = autoClearOnSuccess;
+        this.group = group;
     }
 
     public final int getIconResourceID() {
@@ -99,6 +103,7 @@ class UploadNotificationConfig implements Parcelable {
         parcel.writeString(completed);
         parcel.writeString(error);
         parcel.writeByte((byte) (autoClearOnSuccess ? 1 : 0));
+        parcel.writeString(group);
     }
 
     private UploadNotificationConfig(Parcel in) {
@@ -108,5 +113,6 @@ class UploadNotificationConfig implements Parcelable {
         completed = in.readString();
         error = in.readString();
         autoClearOnSuccess = in.readByte() == 1;
+        group = in.readString();
     }
 }

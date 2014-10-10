@@ -1,9 +1,9 @@
 package com.alexbbb.uploadservice;
 
-import java.io.UnsupportedEncodingException;
-
 import android.os.Parcel;
 import android.os.Parcelable;
+
+import java.io.UnsupportedEncodingException;
 
 /**
  * Represents a request parameter.
@@ -11,7 +11,7 @@ import android.os.Parcelable;
  * @author alexbbb (Alex Gotev)
  *
  */
-class NameValue implements Parcelable {
+public class NameValue implements Parcelable {
 
     private static final String NEW_LINE = "\r\n";
 
