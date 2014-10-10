@@ -75,7 +75,7 @@ public class FileToUpload implements Parcelable {
     public long length() {
         return file.length();
     }
-
+    public File getFile() { return  file; }
     // This is used to regenerate the object.
     // All Parcelables must have a CREATOR that implements these two methods
     public static final Parcelable.Creator<FileToUpload> CREATOR =
