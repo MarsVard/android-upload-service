@@ -1,13 +1,13 @@
 package com.alexbbb.uploadservice;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
-
-import android.os.Parcel;
-import android.os.Parcelable;
 
 /**
  * Represents a file to upload.
@@ -16,7 +16,7 @@ import android.os.Parcelable;
  * @author eliasnaur
  *
  */
-class FileToUpload implements Parcelable {
+public class FileToUpload implements Parcelable {
 
     private static final String NEW_LINE = "\r\n";
 
