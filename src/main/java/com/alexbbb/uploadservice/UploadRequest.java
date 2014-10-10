@@ -1,11 +1,11 @@
 package com.alexbbb.uploadservice;
 
+import android.content.Context;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
-
-import android.content.Context;
 
 /**
  * Represents an upload request.
@@ -55,9 +55,9 @@ public class UploadRequest {
      * successfully
      */
     public void setNotificationConfig(final int iconResourceID, final String title, final String message,
-                                      final String completed, final String error, final boolean autoClearOnSuccess) {
+                                      final String completed, final String error, final boolean autoClearOnSuccess, final String group) {
         notificationConfig = new UploadNotificationConfig(iconResourceID, title, message, completed, error,
-                                                          autoClearOnSuccess);
+                                                          autoClearOnSuccess, group);
     }
 
     /**
